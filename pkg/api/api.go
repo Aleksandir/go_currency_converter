@@ -8,8 +8,11 @@ import (
 )
 
 type ConversionResponse struct {
-	Base  string             `json:"base"`
-	Date  string             `json:"date"`
+	// Base is the base currency for the conversion.
+	Base string `json:"base"`
+	// Date is the date of the conversion rates.
+	Date string `json:"date"`
+	// Rates is a map of currency codes to conversion rates.
 	Rates map[string]float64 `json:"rates"`
 }
 
