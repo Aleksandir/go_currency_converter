@@ -1,8 +1,8 @@
 package converter
 
 import (
+	"currency-converter/pkg/api"
 	"errors"
-	"github.com/yourusername/currency-converter/pkg/api"
 )
 
 // Convert function takes an amount and two currency codes as arguments and returns the converted amount.
