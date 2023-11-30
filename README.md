@@ -19,7 +19,7 @@ This will create an executable file named `converter` in the current directory.
 To use the tool, you need to pass three arguments: the amount you want to convert, the code of the currency you are converting from, and the code of the currency you are converting to. The currency codes should be in the ISO 4217 format. For example, to convert 100 US dollars to euros, you would use the following command:
 
 ```bash
-./converter 100 USD EUR
+./converter USD EUR 100
 ```
 
 The tool will print the converted amount to the standard output.
