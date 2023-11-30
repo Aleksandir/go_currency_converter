@@ -29,7 +29,16 @@ func main() {
 		os.Exit(1)
 	}
 
-	convertedAmount := converter.Convert(amt, rate)
+	if rate <= 0 {
+		fmt.Println("Received invalid conversion rate:", rate)
+		os.Exit(1)
+	}
+
+	convertedAmount, err := converter.Convert(amt, *fromCurrency, *toCurrency)
+	if err != nil {
+		fmt.Println("Error converting amount:", err)
+		os.Exit(1)
+	}
 
 	fmt.Printf("%v %v is %v %v\n", *amount, *fromCurrency, convertedAmount, *toCurrency)
 }
